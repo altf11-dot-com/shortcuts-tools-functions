@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module11"
+Attribute VB_Name = "Shortcuts_Tools"
 Option Explicit
 
 Public Sub KS_CtrlShiftD()
