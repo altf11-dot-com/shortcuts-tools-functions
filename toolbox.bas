@@ -1,21 +1,22 @@
-Attribute VB_Name = "Module1"
+Attribute VB_Name = "Module11"
+Option Explicit
 
-Sub KS_CtrlShiftD()
+Public Sub KS_CtrlShiftD()
     MoveCurrentRowDownOne
 End Sub
 
 
-Sub MoveCurrentRowDownOne()
+Private Sub MoveCurrentRowDownOne()
     Rows(ActiveCell.row).Cut
     Rows(ActiveCell.row + 2).Insert Shift:=xlDown
     Cells(ActiveCell.row + 1, ActiveCell.Column).Activate
 End Sub
 
-Sub KS_CtrlShiftU()
+Public Sub KS_CtrlShiftU()
     MoveCurrentRowUp
 End Sub
 
-Sub MoveCurrentRowUp()
+Private Sub MoveCurrentRowUp()
     Dim currRow As Integer, currCol As Integer, TargetRow As Integer, MinRow As Integer
     Dim AutomaticMode, NextUpwardValue As String, MatchString As String
     currRow = ActiveCell.row
@@ -27,11 +28,11 @@ Sub MoveCurrentRowUp()
         Exit Sub
     End If
     TargetRow = currRow - 1
-    NextUpwardValue = Cells(TargetRow, currCol).value
+    NextUpwardValue = Cells(TargetRow, currCol).Value
     If NextUpwardValue = "" Then
             While TargetRow > MinRow And NextUpwardValue = ""
                 TargetRow = TargetRow - 1
-                NextUpwardValue = Cells(TargetRow, currCol).value
+                NextUpwardValue = Cells(TargetRow, currCol).Value
             Wend
             TargetRow = TargetRow + 1
     End If
@@ -39,7 +40,7 @@ Sub MoveCurrentRowUp()
         If NextUpwardValue <> MatchString Then
             While TargetRow > MinRow And NextUpwardValue <> MatchString
                 TargetRow = TargetRow - 1
-                NextUpwardValue = Cells(TargetRow, currCol).value
+                NextUpwardValue = Cells(TargetRow, currCol).Value
             Wend
             TargetRow = TargetRow + 1
         End If
@@ -49,5 +50,24 @@ Sub MoveCurrentRowUp()
     Cells(TargetRow, currCol).Activate
 End Sub
 
+Public Sub KS_CtrlShiftT()
+    DateTimeStamp
+End Sub
 
 
+
+Sub DateTimeStamp()
+    Dim okToWrite As Long
+    With ActiveCell
+        If .Formula = vbNullString Then
+            okToWrite = vbYes
+        Else
+            Beep
+            okToWrite = MsgBox("Active cell is not empty, over-write?", vbYesNo, "Date/Time Stamp")
+            If okToWrite = vbNo Then Exit Sub
+        End If
+        If okToWrite = vbYes Then .Value = Now
+        .NumberFormat = "[$-en-US]m/d/yy h:mm AM/PM;@"
+        Columns(.Column).EntireColumn.AutoFit
+    End With
+End Sub
