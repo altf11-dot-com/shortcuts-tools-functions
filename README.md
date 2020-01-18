@@ -1,6 +1,6 @@
 # shortcuts-tools-functions
 
-__ *Odds and ends ... Set Ctrl+Shift keyboard shortcuts to KS_ procedures* __
+*__Odds and ends ... Set Ctrl+Shift keyboard shortcuts to KS_ procedures__*
 
 DateTimeStamp - enters the current date and time in the current cell
 
