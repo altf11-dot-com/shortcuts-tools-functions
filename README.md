@@ -8,4 +8,4 @@ MoveCurrentRowDownOne - moves an entire row down one row
 
 MoveCurrentRowUp - moves an entire row up to the next spot below a non-empty cell in the current column
 
-Planned items -- three part financial plan
+Planned items -- four part financial plan: budget, financial statement, P&L, cash flow
