@@ -11,8 +11,7 @@ MoveCurrentRowUp - moves an entire row up to the next spot below a non-empty cel
 Planned items:
 * financial tools
 * budget
-* cash sheet
-* check register
+* cash sheets/check register
 * credit card rundown
 * cash flow
 * net worth
