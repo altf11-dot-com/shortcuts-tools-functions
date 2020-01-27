@@ -71,3 +71,14 @@ Sub DateTimeStamp()
         Columns(.Column).EntireColumn.AutoFit
     End With
 End Sub
+
+Public Sub KS_CtrlShiftF()
+    AutofitAllColumnsAllRows
+End Sub
+
+Sub AutofitAllColumnsAllRows()
+    If MsgBox("OK = Autofit all rows and columns", vbOKCancel, "") = vbCancel Then end
+    Columns.EntireColumn.AutoFit
+    Rows.EntireRow.AutoFit
+End Sub
+

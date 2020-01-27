@@ -2,6 +2,8 @@
 
 **_Odds and ends ... Set Ctrl+Shift keyboard shortcuts to KS procedures_**
 
+AutofitAllColumnsAllRows - auto-sizes column width and row height for all rows and columns
+
 DateTimeStamp - enters the current date and time in the current cell
 
 MoveCurrentRowDownOne - moves an entire row down one row
