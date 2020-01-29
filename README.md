@@ -10,6 +10,8 @@ MoveCurrentRowDownOne - moves an entire row down one row
 
 MoveCurrentRowUp - moves an entire row up to the next spot below a non-empty cell in the current column
 
+vba_error_handling_demo - demonstrates VBA error handling across procedures: On Error, Resume
+
 Planned items:
 * financial tools
 * budget
