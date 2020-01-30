@@ -15,8 +15,8 @@ vba_error_handling_demo - demonstrates VBA error handling across procedures:
 * Err object
 
 * Statements:
-* * On Error, On Error Goto line/label
-* * Resume, Resume Next, Resume line/label
+  * On Error, On Error Goto line/label
+  * Resume, Resume Next, Resume line/label
 
 
 Future Planned items:
