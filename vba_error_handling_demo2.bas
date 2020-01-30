@@ -31,3 +31,10 @@ err001_:
     On Error GoTo 0
     Resume
 End Sub
+
+Sub OnErrorStatementDemo()
+    Dim objRef As Object, msg As String
+    On Error GoTo ErrorHandler ' Enable error-handling routine.
+    Open "TESTFILE" For Output As #1 ' Open file for output.
+    Kill "TESTFILE" ' Attempt to delete open
+    ' file.
