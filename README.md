@@ -12,13 +12,14 @@ MoveCurrentRowUp - moves an entire row up to the next spot below a non-empty cel
 
 vba_error_handling_demo - demonstrates VBA error handling across procedures:
 
-Err object
+* Err object
 
-Statements:
-On Error, On Error Goto line/label
-Resume, Resume Next, Resume line/label
+* Statements:
+* * On Error, On Error Goto line/label
+* * Resume, Resume Next, Resume line/label
 
-Planned items:
+
+Future Planned items:
 * financial tools
 * budget
 * cash sheets/check register
