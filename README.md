@@ -26,3 +26,5 @@ Future Planned items:
 * credit card rundown
 * cash flow
 * net worth
+
+This message brought to you by Quasar
